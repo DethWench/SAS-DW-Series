@@ -1,0 +1,16 @@
+DATA immunesupport;
+	INFILE CARDS;
+	INPUT Brand Qty Price;
+	CARDS;
+1 10 6.99
+2 30 19.99
+3 2 1.99
+4 2 2.49
+5 20 11.99
+;
+RUN;
+
+PROC SORT;
+	by Price;
+PROC PRINT;
+RUN;
